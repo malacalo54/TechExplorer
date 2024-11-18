@@ -1,0 +1,100 @@
+@import "/components/reset.css";
+@import "/components/header.css";
+@import "/components/footer.css";
+@import "/components/newsletter.css";
+body {
+  background-image: url("../images/Purple Gradient Geometric Flat Advertising Background Wallpaper Image For Free Download - Pngtree.jpg");
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+h1 {
+  width: 14vw;
+  color: white;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 2vw;
+  margin-top: 20px;
+}
+section .posts-container {
+  background-color: rgba(230, 230, 250, 0.5);
+  margin-bottom: 1.25rem;
+  border-radius: 0.9375rem;
+  position: relative;
+}
+section .posts-container p {
+  color: white;
+  font-weight: bold;
+  background-color: transparent;
+  backdrop-filter: blur(0.5rem);
+  position: absolute;
+  width: 78vw;
+  height: 24vw;
+  font-size: 3vw;
+  border: 0.0125rem solid;
+  bottom: 0;
+  padding: 7vw;
+  border-radius: 1.0625rem;
+}
+section .post1 img {
+  width: 78vw;
+  height: 50vw;
+  border-radius: 0.9375rem;
+  border: 0.0625rem solid white;
+}
+
+.cpu-description {
+  margin: 30px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.cpu-description h2 {
+  font-size: 28px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.cpu-description p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: white;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  section .posts-container {
+    max-width: 21.875rem;
+  }
+  section .posts-container p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    background-color: transparent;
+    backdrop-filter: blur(0.5rem);
+    position: absolute;
+    max-width: 21.875rem;
+    max-height: 6.24rem;
+    font-size: 0.875rem;
+    border: 0.0125rem solid;
+    bottom: 0;
+    padding: 3vw;
+    border-radius: 1.0625rem;
+  }
+  .post1 img {
+    max-width: 21.875rem;
+    max-height: 16.25rem;
+  }
+  h1 {
+    max-width: 80px;
+  }
+}/*# sourceMappingURL=articuloCPU.css.map */

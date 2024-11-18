@@ -1,0 +1,245 @@
+$primary-color: white;
+$secondary-color: black;
+$background-color: rgba(0, 0, 0, 0.7);
+$border-radius: 1.25rem;
+$max-width: 75rem;
+
+@import "/components/reset.css";
+@import "/components/header.css";
+@import "/components/footer.css";
+@import "/components/newsletter.css";
+
+@mixin button-style($bg-color, $text-color, $radius, $padding) {
+    background-color: $bg-color;
+    color: $text-color;
+    border-radius: $radius;
+    padding: $padding;
+    text-align: center;
+    width: 15.625rem;
+
+    a {
+        display: flex;
+        flex-direction: row;
+        text-decoration: none;
+        color: $text-color;
+        font-weight: bold;
+        gap: 5px;
+        justify-content: center;
+
+    }
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main-content {
+    flex: 1;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0.0125rem;
+
+    h1 {
+        font-size: 3rem;
+        color: $primary-color;
+    }
+
+    h3 {
+        font-size: 1.875rem;
+        color: $primary-color;
+        text-decoration: underline;
+    }
+}
+
+.logotipo {
+    img {
+        width: 8.125rem;
+        border: 0.125rem solid #fff;
+        border-radius: 50%;
+        margin-top: 1.25rem;
+    }
+}
+
+.container-section1 {
+    color: $primary-color;
+    max-width: $max-width;
+    margin: auto;
+    text-align: center;
+    border-radius: 0.5rem;
+
+    @if $max-width >62.5rem {
+        padding: 1rem;
+    }
+
+    @else {
+        padding: 0.5rem;
+    }
+}
+
+.botones {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    align-items: center;
+    margin-bottom: 1.25rem;
+
+    .boton1,
+    .boton2 {
+        @include button-style($primary-color, $secondary-color, $border-radius, 0.625rem);
+    }
+}
+
+svg {
+    width: 7vw;
+    max-width: 26px;
+}
+
+@media (min-width: 768px) {
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1.25rem;
+    }
+
+    section h1 {
+        margin-top: 3.125rem;
+        font-size: 15vw;
+        font-weight: bold;
+    }
+
+    section h3 {
+        font-size: 9vw;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .logotipo img {
+        position: absolute;
+        width: 31.25rem;
+        max-width: 50vw;
+        opacity: 0.7;
+        transform: translate(0%, 18.125rem);
+        z-index: -1;
+    }
+
+    .container-section1 span {
+        font-size: 2.5vw;
+        font-weight: bold;
+        color: $primary-color;
+        line-height: 1.5;
+        max-width: 90%;
+        margin-top: 1.25rem;
+    }
+
+    .botones {
+        margin-top: 1.25rem;
+        flex-direction: row;
+        gap: 0.625rem;
+        justify-content: center;
+    }
+
+    .botones .boton1,
+    .botones .boton2 {
+        font-size: 2.5vw;
+        font-weight: bold;
+        width: auto;
+        @include button-style($primary-color, $secondary-color, $border-radius, 0.625rem 1.25rem); // 10px 20px
+    }
+
+    footer {
+        font-size: 2vw;
+        padding: 2vw;
+    }
+
+    svg {
+        width: 36px;
+    }
+}
+
+@media (min-width: 1025px) {
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 1.25rem;
+    }
+
+    section h1 {
+        font-size: 13vw;
+        font-weight: bold;
+        transform: translate(-6.25rem, -5.625rem);
+    }
+
+    section h3 {
+        font-size: 7.5vw;
+        font-weight: bold;
+        text-decoration: none;
+        transform: translate(-11.875rem, -7.5rem);
+    }
+
+    .logotipo img {
+        position: absolute;
+        max-width: 40vw;
+        opacity: 0.7;
+        transform: translate(10%, 4.375rem);
+        z-index: -1;
+    }
+
+    .container-section1 span {
+        display: flex;
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: $primary-color;
+        line-height: 1.5;
+        max-width: 90%;
+        transform: translate(-1.875rem, -11.875rem);
+    }
+
+    .botones {
+        margin-top: 1.25rem;
+        flex-direction: row;
+        gap: 0.625rem;
+        justify-content: center;
+        transform: translate(-16.875rem, -12.5rem);
+    }
+
+    .botones .boton1,
+    .botones .boton2 {
+        font-size: 1.25rem;
+        width: 25rem;
+        max-width: 62.5rem;
+        font-weight: bold;
+        transform: translate(9.375rem, -5rem);
+        @include button-style($primary-color, $secondary-color, $border-radius, 0.625rem 1.25rem); // 10px 20px
+    }
+
+    footer {
+        font-size: 1vw;
+        padding: 2vw;
+    }
+}

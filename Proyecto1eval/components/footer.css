@@ -1,0 +1,41 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(217, 217, 217, 0.09);
+    color: white;
+    font-size: 12px;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    margin-top: auto;
+    padding: 15px;
+
+
+}
+.adicionales{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    gap: 10px;
+    
+}
+
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    text-align: center;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}

@@ -1,0 +1,194 @@
+@import "/components/reset.css";
+@import "/components/footer.css";
+@import "/components/header.css";
+@import "/components/newsletter.css";
+
+body {
+    background-image: url("../images/Purple\ Gradient\ Geometric\ Flat\ Advertising\ Background\ Wallpaper\ Image\ For\ Free\ Download\ -\ Pngtree.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+}
+
+.imagen img {
+    display: none;
+}
+
+h1 {
+    font-weight: bold;
+    color: white;
+    font-size: 10vw;
+    margin-top: 0.625rem;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 2vw;
+
+    .posts-container {
+        background-color: rgba(230, 230, 250, 0.5);
+        margin-bottom: 1.25rem;
+        border-radius: 0.9375rem;
+        position: relative;
+
+        p {
+            color: white;
+            font-weight: bold;
+            background-color: transparent;
+            backdrop-filter: blur(0.5rem);
+            position: absolute;
+            width: 78vw;
+            height: 24vw;
+            font-size: 3vw;
+            border: 0.0125rem solid;
+            bottom: 0;
+            padding: 7vw;
+            border-radius: 1.0625rem;
+        }
+    }
+
+    .post1 img,
+    .post2 img,
+    .post3 img,
+    .post4 img,
+    .post5 img,
+    .post6 img {
+        width: 78vw;
+        height: 50vw;
+        border-radius: 0.9375rem;
+        border: 0.0625rem solid white;
+    }
+    
+}
+svg{
+    width: 36px;
+}
+
+@media (min-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+   
+    section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+        padding: 1.25rem;
+        position: relative;
+        max-width: 48rem;
+    }
+
+    section .posts-container {
+        max-width: 21.875rem;
+
+        p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            background-color: transparent;
+            backdrop-filter: blur(0.5rem);
+            position: absolute;
+            max-width: 21.875rem;
+            max-height: 6.24rem;
+            font-size: 0.875rem;
+            border: 0.0125rem solid;
+            bottom: 0;
+            padding: 3vw;
+            border-radius: 1.0625rem;
+        }
+    }
+
+    .post1 img,
+    .post2 img,
+    .post3 img,
+    .post4 img,
+    .post5 img,
+    .post6 img {
+        max-width: 21.875rem;
+        max-height: 16.25rem;
+    }
+
+    .imagen img {
+        display: none;
+    }
+    h1{
+        font-size: 80px;
+    }
+    svg{
+        width: 36px;
+    }
+}
+
+@media (min-width: 1025px) {
+    body {
+        min-height: 100vh;
+        background-image: url("../images/Purple\ Gradient\ Geometric\ Flat\ Advertising\ Background\ Wallpaper\ Image\ For\ Free\ Download\ -\ Pngtree.jpg");
+        background-attachment: fixed;
+       
+    }
+
+    .titulo {
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+
+    h1 {
+        display: flex;
+        flex-direction: row;
+        font-size: 3rem;
+        color: white;
+        margin-top: 1.25rem;
+    }
+    svg{
+        width: 36px;
+    }
+
+    .main-content {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-right: 100px;
+    }
+
+    .imagen img {
+        display: block;
+        width: 20vw;
+        max-width: 18.75rem;
+        max-height: 18.75rem;
+        border: 0.125rem solid #fff;
+        border-radius: 50%;
+        margin-left: 45px;
+    }
+
+    section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+        max-width: 50rem;
+    }
+
+    .posts-container img {
+        width: 100%;
+        height: 12.5rem;
+        object-fit: cover;
+    }
+
+    .posts-container p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
